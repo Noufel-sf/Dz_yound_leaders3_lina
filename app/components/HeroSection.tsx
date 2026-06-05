@@ -18,7 +18,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-32 animate-fadeIn">
+      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-45 animate-fadeIn">
         <div className="flex flex-col items-center justify-center text-center">
           {/* Badge */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/10 px-6 py-3 backdrop-blur-sm animate-slideDown" style={{ animationDelay: '0.1s' }}>
@@ -27,19 +27,19 @@ export default function HeroSection() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="heading text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-white mb-6 drop-shadow-lg animate-slideDown" style={{ animationDelay: '0.2s' }}>
+          <h1 className="heading text-7xl sm:text-8xl lg:text-[12rem]   leading-tight text-white mb-6 drop-shadow-lg animate-slideDown" style={{ animationDelay: '0.2s' }}>
             إرث يجمعنا
             <br />
             <span className="text-primary heading">وجمال ينتظرنا</span>
           </h1>
 
           {/* Subheading */}
-          <p className="mb-8 max-w-2xl text-lg sm:text-xl text-gray-100 leading-relaxed drop-shadow-md animate-slideDown" style={{ animationDelay: '0.3s' }}>
+          <p className="mb-8 max-w-xl text-md sm:text-xl text-gray-100 leading-relaxed drop-shadow-md animate-slideDown" style={{ animationDelay: '0.3s' }}>
             استكشف كنوز بلادك من المحيط إلى الخليج، في رحلة في أعماق التاريخ والطبيعة الساحرة في قلب الوطن العربي
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center animate-slideDown" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-row gap-4 sm:gap-6 items-center justify-center animate-slideDown" style={{ animationDelay: '0.4s' }}>
             <Link
               href="#contact"
               className="inline-flex items-center justify-center rounded-full bg-secondary px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:brightness-110 hover:shadow-2xl hover:scale-105"
@@ -48,7 +48,7 @@ export default function HeroSection() {
             </Link>
             <Link
               href="#explore"
-              className="inline-flex items-center justify-center rounded-full border-2 border-white/50 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 hover:scale-105"
+              className="inline-flex items-center justify-center rounded-full border-2 border-white/50 px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 hover:scale-105"
             >
               اكتشف المزيد
             </Link>

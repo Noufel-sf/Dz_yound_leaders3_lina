@@ -1,16 +1,7 @@
 @import "tailwindcss";
 
 .heading {
-  font-family: "Amiri Quran", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-* {
-  font-family: "Zain", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Rakkas", sans-serif;
 }
 
 
@@ -33,9 +24,7 @@
 }
 
 * {
-  font-family: "Noto Sans Arabic", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
+  font-family: "Zain", sans-serif;
 }
 
 /* Custom animations */

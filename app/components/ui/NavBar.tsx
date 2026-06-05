@@ -49,20 +49,18 @@ export default function Navbar() {
               <div className={`heading text-2xl font-bold tracking-tight transition-colors ${
                 scrolled ? "text-primary" : "text-white"
               }`}>
-                إرث
+                إرث و اثر
               </div>
-              <div className={`text-xs font-medium transition-colors ${
+             {/*  <div className={`text-xs font-medium transition-colors ${
                 scrolled ? "text-slate-600" : "text-white/70"
               }`}>
                 HERITAGE TRAVEL AGENCY
-              </div>
+              </div> */}
             </div>
           </Link>
 
           {/* Desktop links */}
-          <div className={`hidden items-center gap-12 text-sm font-medium md:flex ${
-            scrolled ? "text-slate-700" : "text-white/90"
-          }`}>
+          <div className={`hidden items-center gap-12 text-sm font-medium md:flex text-white`}>
             {navLinks.map((link) => (
               <Link
                 key={link.to}
