@@ -1,98 +1,109 @@
-import Image from "next/image";
+"use client";
 
-export default function OurVision() {
+import { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+const DEFAULT_END_DESKTOP = "+=200%";
+const DEFAULT_END_MOBILE = "+=150%";
+
+gsap.registerPlugin(ScrollTrigger);
+
+interface AboutLayerOneProps {
+  endDesktop?: string;
+  endMobile?: string;
+  className?: string;
+}
+
+export default function AboutLayerOne({
+  endDesktop = DEFAULT_END_DESKTOP,
+  endMobile = DEFAULT_END_MOBILE,
+  className,
+}: AboutLayerOneProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const headlineRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      if (!sectionRef.current || !headlineRef.current) return;
+
+      const mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          isDesktop: "(min-width: 768px)",
+          isMobile: "(max-width: 767px)",
+        },
+        (context) => {
+          const { isDesktop } = context.conditions as { isDesktop: boolean };
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              id: "about-layer-one",
+              trigger: sectionRef.current,
+              start: "top 80%", // Start animating slightly before it hits top
+              end: "bottom top", // End exactly when it leaves the screen
+              scrub: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          const headline = headlineRef.current as HTMLElement;
+
+          tl.fromTo(
+            headline.querySelectorAll(".header-title span"),
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1, stagger: 0.1, duration: 1 },
+            0,
+          )
+          .fromTo(
+              headline.querySelector(".sub-header"),
+              { y: 30, opacity: 0 },
+              { y: 0, opacity: 1, duration: 1 },
+              0.3,
+            )
+            .to(
+              headlineRef.current,
+              {
+                y: "-15vh", // Subtle parallax effect as you scroll past
+                opacity: 0,
+                duration: 1.5,
+              },
+              1, // Starts fading out naturally as it goes up
+            );
+        },
+      );
+
+      return () => {
+        mm.revert();
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: sectionRef },
+  );
+
   return (
     <section
-      dir="rtl"
-      className="relative overflow-hidden  px-4 py-20 sm:px-8 lg:px-12"
+      ref={sectionRef}
+      className={`relative md:h-screen h-[60vh]  w-full mt-20  overflow-hidden bg-primary-950 ${
+        className ?? ""
+      }`}
     >
-      {/* subtle background grid */}
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.025]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-      />
-
-      {/* large faded heading behind content */}
-
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 lg:flex-row lg:items-stretch lg:gap-16">
-        {/* ── Text column ─────────────────────────────────── */}
-        <div className="flex flex-1 flex-col justify-center text-right">
-          {/* badge */}
-          <div className="">
-            <Image
-              src="/img.svg"
-              alt="فريق انطلاقتك"
-              width={78}
-              height={78}
-            />
-          </div>
-
-          {/* headline */}
-          <h2 className="mt-5 heading text-4xl font-black leading-tight text-slate-900 sm:text-5xl lg:text-[3.4rem]">
-            لماذا هذا{" "}
-            <span className="relative text-primary heading marker-underline">
-              البرنامج
-            </span>{" "}
-            مهم؟
-          </h2>
-
-          {/* body */}
-          <p className="mt-5 max-w-xl text-lg leading-9 text-slate-500">
-            نسعى إلى تقليص الفجوة بين الشباب والمجالس المنتخبة عبر تكوين عملي
-            يرفع الوعي السياسي ويمنح المشاركين أدوات حقيقية لفهم الشأن العام
-            والمساهمة فيه.
-          </p>
-
-          {/* divider */}
-          <div className="my-8 h-px w-24 bg-primary/20 mr-auto" />
-
-          {/* mission + vision cards */}
-          <div className="grid gap-4 sm:grid-cols-2">
-            <article className="group relative overflow-hidden rounded-2xl border border-primary/15 bg-primary/[0.04] p-5 transition-all duration-200 hover:border-primary/35">
-              <div className="absolute left-0 top-0 h-full w-1 bg-primary rounded-r-full" />
-
-              <h3 className="heading text-lg font-extrabold text-slate-900">
-                رؤية واضحة
-              </h3>
-              <p className="mt-2 text-sm leading-7 text-slate-600">
-                إعداد جيل واعٍ وقادر على المشاركة الفعالة في الحياة السياسية
-                وصناعة القرار
-              </p>
-            </article>
-          </div>
-        </div>
-
-        {/* ── Image column ─────────────────────────────────── */}
-        <div className="relative w-full max-w-sm shrink-0 sm:max-w-md lg:max-w-[26rem]">
-          {/* decorative frame behind image */}
-          <div className="absolute -bottom-4 -left-4 h-full w-full rounded-3xl border-2 border-primary/15" />
-
-          {/* image container */}
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-slate-200/60">
-            <Image
-              src="/h.jpg"
-              alt="لماذا هذا البرنامج مهم"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* small accent dot grid */}
-          <div
-            className="absolute -right-6 -top-6 -z-10 h-24 w-24 opacity-30"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, currentColor 2px, transparent 2px)",
-              backgroundSize: "8px 8px",
-              color: "var(--color-primary, #2563eb)",
-            }}
-          />
-        </div>
+        ref={headlineRef}
+        className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center"
+      >
+        <h2 className="header-title -rotate-2 flex flex-col items-center heading justify-center gap-x-6 font-display text-[15vw] uppercase leading-none tracking-tighter  md:flex-row md:text-[15rem]">
+          <span className=" heading text-white">رؤيتنا </span>
+          <span className=" heading text-primary">للمجتمع </span>
+        </h2>
+        <p className="sub-header mt-8 max-w-4xl font-display text-white/80 text-lg uppercase tracking-tight md:mt-12 md:text-3xl">
+          منذ 2016، يعمل مخيم رواد الشباب على تمكين الشباب من تطوير المهارات
+          القيادية والمشاركة المدنية، ودعمهم في بناء مشاريع مجتمعية مستدامة.
+          نقدّم ورش عمل، تدريبًا عمليًا، وبرامج توجيهية تهدف إلى إعداد الجيل
+          القادم من القادة والمبادرات المحلية.
+        </p>
       </div>
     </section>
   );

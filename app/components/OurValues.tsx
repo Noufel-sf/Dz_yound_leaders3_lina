@@ -150,7 +150,7 @@ export default function OurValues() {
     <section
       ref={sectionRef}
       id="values"
-      className="relative min-h-screen overflow-hidden px-6 mt-20 pb-24 pt-20 md:px-20"
+      className="relative overflow-hidden px-6 pb-24 pt-20 md:px-20"
       dir="rtl"
     >
       {/* Subtle grain overlay */}
