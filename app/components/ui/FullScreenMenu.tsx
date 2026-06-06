@@ -7,8 +7,8 @@ import { useGSAP } from '@gsap/react';
 
 const MENU_LINKS = [
   { key: 'الرئيسية', href: '/' },
-  { key: 'من نحن', href: '/#' },
-  { key: 'تواصل معنا', href: '/#' },
+  { key: 'من نحن', href: '/about' },
+  { key: 'تواصل معنا', href: '/contact' },
 ] as const;
 
 export default function FullScreenMenu({

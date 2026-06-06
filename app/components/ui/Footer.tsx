@@ -33,7 +33,7 @@ const SOCIAL_LINKS = [
 const PRIMARY_NAV = [
   { label: 'الرئيسية', path: '/' },
   { label: 'من نحن', path: '/about' },
-  { label: 'مشاريعنا', path: '/projects' },
+  { label: 'تواصل معنا', path: '/contact' },
 ]
 
 
@@ -152,7 +152,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(
           <div ref={btpRef} className="flex w-full justify-end pr-[5vw]">
             <button
               onClick={onScrollToTop}
-              className="flex h-14 w-14 items-center justify-center bg-primary text-black transition-transform hover:scale-110 md:h-16 md:w-16"
+              className="flex h-14 w-14 items-center cursor-pointer justify-center bg-primary text-black transition-transform hover:scale-110 md:h-16 md:w-16"
             >
               <svg
                 className="h-6 w-6 md:h-8 md:w-8"
