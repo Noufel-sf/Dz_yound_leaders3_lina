@@ -19,7 +19,7 @@ export default function AccordionItem({ item }: AccordionItemProps) {
   return (
     <div
       className={[
-        "cursor-pointer border-b border-primary/15 px-4 transition-colors duration-300 sm:px-8",
+        "cursor-pointer border-b  border-primary/15 px-4 transition-colors duration-300 sm:px-8",
         open ? "bg-primary/10" : "bg-transparent",
       ].join(" ")}
     >
@@ -30,8 +30,8 @@ export default function AccordionItem({ item }: AccordionItemProps) {
       >
         <span
           className={[
-            "text-base font-medium leading-snug text-slate-800 transition-colors duration-300 sm:text-lg",
-            open ? "text-primary" : "text-slate-800",
+            "text-base font-medium leading-snug text-white transition-colors duration-300 sm:text-lg",
+            open ? "text-primary" : "text-white",
           ].join(" ")}
         >
           {item.question}
@@ -53,7 +53,7 @@ export default function AccordionItem({ item }: AccordionItemProps) {
           open ? "max-h-96 pb-6" : "max-h-0",
         ].join(" ")}
       >
-        <p className="pr-0 text-right text-sm leading-8 text-slate-600 sm:pr-2 sm:text-base">
+        <p className="pr-0 text-right text-sm leading-8 text-white/60 sm:pr-2 sm:text-base">
           {item.answer}
         </p>
       </div>
