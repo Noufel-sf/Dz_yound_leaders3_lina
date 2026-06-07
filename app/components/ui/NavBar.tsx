@@ -58,12 +58,9 @@ const NavBar = forwardRef<HTMLDivElement>((props, ref) => {
         {/* RIGHT SECTION */}
         <div className="pointer-events-auto order-2 flex flex-1 items-center justify-end gap-4 md:order-0">
           {/* Desktop CTA */}
-          <Link
-            href="/about"
-            onClick={(e) => handleNavigation(e, '/about')}
-            className="hidden md:block"
-          >
-            <HistoryButton
+          <a href="">
+
+          <HistoryButton
               text="انضم الينا"
               bgColor="#ffd230"
               shadowColor="#ffd230"
@@ -71,7 +68,8 @@ const NavBar = forwardRef<HTMLDivElement>((props, ref) => {
               paddingY="py-2"
               fontSize="text-base"
             />
-          </Link>
+          </a>
+
 
           {/* Mobile Menu Icon */}
           <div

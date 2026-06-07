@@ -22,7 +22,7 @@ export default function BimoButton({
   paddingY = 'py-4',
   fontSize = 'text-md',
   className = '',
-  textColor = '#fff',
+  textColor = '#000',
 }: BimoButtonProps) {
   const buttonRef = useRef<HTMLDivElement>(null);
   const waveContainerRef = useRef<HTMLDivElement>(null);
@@ -117,7 +117,7 @@ export default function BimoButton({
         backgroundColor: bgColor,
         boxShadow: `0 6px 0 0 ${shadowColor}`,
       }}
-      className={`group pointer-events-auto relative flex cursor-pointer items-center overflow-hidden rounded-2xl transition-all select-none active:translate-y-1 active:shadow-none ${className}`}
+      className={`group pointer-events-auto relative flex cursor-pointer items-center overflow-hidden transition-all select-none active:translate-y-1 active:shadow-none ${className}`}
     >
       {/* THE WAVY LIQUID LAYER */}
       <div
@@ -144,9 +144,9 @@ export default function BimoButton({
         <span
           ref={textRef}
           style={{
-            color: textColor,
+            color:textColor
           }}
-          className={`font-english tracking-tighter whitespace-nowrap uppercase will-change-transform hover:text-[#FDF6E9] ${fontSize}`}
+          className={`font-english tracking-tighter whitespace-nowrap uppercase transition-all hover:text-white will-change-transform ${fontSize}`}
         >
           {text}
         </span>
