@@ -6,6 +6,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Owner from '../components/Owner';
 import WhatYourGoingToSee from '../components/WhatYourGoingToSee';
+import Plan from '../components/Plan';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,7 +91,9 @@ export default function AboutPage() {
         </div>
       </div>
       <WhatYourGoingToSee />
+      <Plan />
       <Owner />
     </section>
   );
 }
+  
