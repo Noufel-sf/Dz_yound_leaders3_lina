@@ -96,7 +96,7 @@ export default function AboutLayerOne({
       >
         <h2 className="header-title -rotate-2 flex flex-col items-center heading justify-center gap-x-6 font-display text-[15vw] uppercase leading-none tracking-tighter  md:flex-row md:text-[15rem]">
           <span className=" heading text-white">رؤيتنا </span>
-          <span className=" heading text-primary">للمجتمع </span>
+          <span className=" heading text-primary">للمجتمع ؟</span>
         </h2>
         <p className="sub-header mt-8 max-w-4xl font-display text-white/80 text-lg uppercase tracking-tight md:mt-12 md:text-3xl">
           منذ 2016، يعمل مخيم رواد الشباب على تمكين الشباب من تطوير المهارات

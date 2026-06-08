@@ -6,7 +6,9 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Owner from '../components/Owner';
 import WhatYourGoingToSee from '../components/WhatYourGoingToSee';
+import ProblemSection from '../components/ProblemSection';
 import Plan from '../components/Plan';
+import SolutionSection from '../components/SolutionSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +43,7 @@ export default function AboutPage() {
       ref={manifestoRef}
       dir="rtl"
       className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-black px-6 pb-16 pt-32 md:px-20 md:pb-20 md:pt-40"
-    >
+    > 
       <div
         ref={manifestoInner}
         className="flex flex-col justify-between gap-16 will-change-[filter,opacity,transform]"
@@ -91,6 +93,8 @@ export default function AboutPage() {
         </div>
       </div>
       <WhatYourGoingToSee />
+      <ProblemSection />
+      <SolutionSection /> 
       <Plan />
       <Owner />
     </section>

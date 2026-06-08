@@ -8,6 +8,7 @@ import OurValues from "./components/OurValues";
 import { useRef } from "react";
 import TestimonialSection from "./components/SomeImagesSection";
 import OurVision from "./components/OurVision";
+import ProblemSection from "./components/ProblemSection";
 
 export default function Home() {
   const testimonialsRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,8 @@ export default function Home() {
 
   return (
     <main className="flex w-full flex-col">
-      <HeroSection />
+      <HeroSection /> 
+      <ProblemSection />
       <OurVision />
       <OurValues />
       <TestimonialSection />
