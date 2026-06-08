@@ -162,7 +162,7 @@ export default function AboutLayerOne({
         </h2>
         <div
           ref={logoCardRef}
-          className="mx-auto mb-8 w-full max-w-[18rem] mt-20 -rotate-2 border-4 border-black bg-white p-4 shadow-[10px_8px_0_0_#111111] sm:max-w-[24rem] lg:max-w-120"
+          className="mx-auto mb-8 w-full max-w-[18rem] mt-20 -rotate-2 border-4 border-black bg-white p-4 shadow-[10px_8px_0_0_#ffb900] sm:max-w-[24rem] lg:max-w-120"
         >
           <div className="relative aspect-16/5 w-full">
             <Image
