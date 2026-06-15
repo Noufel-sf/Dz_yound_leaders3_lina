@@ -119,11 +119,11 @@ export default function FaqSection() {
     >
       {/* ── TOP LABEL ── */}
       <div className="faq-label mb-16 flex items-center gap-6">
-        <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
+        <span className="font-mono text-lg uppercase tracking-[0.3em] text-primary">
           الأسئلة الشائعة
         </span>
         <div className="h-px w-12 bg-white/10" />
-        <span className="font-mono text-xs text-white/20">
+        <span className="font-mono text-lg text-primary">
           {String(faqs.length).padStart(2, '0')} سؤال
         </span>
       </div>

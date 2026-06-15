@@ -243,10 +243,10 @@ export default function FullScreenMenu({
               Instagram
             </a>
             <a href="#" className="transition-colors hover:text-white">
-              TikTok
+              Facebook
             </a>
           </div>
-          <p>©2026 BIMO CORPORATE</p>
+          <p>©2026 Nasri noufel seif el islam </p>
         </div>
       </div>
     </div>

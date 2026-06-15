@@ -21,8 +21,8 @@ export default function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-20 sm:py-45 animate-fadeIn">
         <div className="flex flex-col items-center justify-center text-center">
           {/* Badge */}
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border-2 border-primary/40 bg-primary/10 px-6 py-3 backdrop-blur-sm animate-slideDown" style={{ animationDelay: '0.1s' }}>
-            <span className="h-2 w-2 rounded-full heading bg-primary" />
+          <div className="mb-6 inline-flex items-center gap-2  border-2 border-primary/40 bg-primary/10 px-6 py-3 backdrop-blur-sm animate-slideDown" style={{ animationDelay: '0.1s' }}>
+            <span className="h-2 w-2  heading bg-primary" />
             <span className="text-sm font-bold text-primary">منصة السفر والسياحة الأولى</span>
           </div>
 

@@ -135,7 +135,7 @@ const ContactPage = () => {
       </section>
 
       {/*SOCIAL GRID  */}
-      <section className="mt-32 grid grid-cols-2 border-t border-white/10 md:grid-cols-4">
+      <section className="mt-32 grid grid-cols-2 border-t border-white/10">
         {SOCIAL_LINKS.map((social) => (
           <a
             key={social.name}

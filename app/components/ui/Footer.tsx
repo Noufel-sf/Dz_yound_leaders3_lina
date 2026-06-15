@@ -52,7 +52,7 @@ const Footer = forwardRef<HTMLElement, FooterProps>(() => {
           <div className="relative  aspect-square h-[22vw] overflow-hidden rounded-sm md:flex">
             <Image
               src="/logopreloader.png"
-              alt="EDG Groupe Mascot"
+              alt="DZ young leaders"
               className="h-full w-full object-cover"
               width={500}
               height={500}

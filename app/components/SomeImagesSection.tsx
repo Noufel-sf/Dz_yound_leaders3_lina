@@ -93,7 +93,7 @@ export default function TestimonialSection() {
   return (
     <section
       ref={containerRef}
-      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden py-12 text-center md:py-24"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden text-center "
     >
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-5"
@@ -105,8 +105,8 @@ export default function TestimonialSection() {
 
       <div className="z-10 mb-6 px-6 text-center md:mb-6">
         <h2 className="text-[5rem] leading-tight heading font-black tracking-tighter text-white uppercase md:text-[12rem]">
-          <span className="text-primary">.</span>
-          <br className="md:hidden" /> {"بعض المناطق"}
+          <br className="md:hidden" /> {"بعض "}
+          <span className="text-primary heading">المناطق</span>
         </h2>
       </div>
 
