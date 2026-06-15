@@ -42,13 +42,13 @@ export default function HeroSection() {
           <div className="flex flex-row gap-4 sm:gap-6 items-center justify-center animate-slideDown" style={{ animationDelay: '0.4s' }}>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-secondary px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:brightness-110 hover:shadow-2xl hover:scale-105"
+              className="inline-flex items-center justify-center  bg-secondary px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:brightness-110 hover:shadow-2xl hover:scale-105"
             >
               احجز الآن
             </Link>
             <Link
-              href="#explore"
-              className="inline-flex items-center justify-center rounded-full border-2 border-white/50 px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 hover:scale-105"
+              href="/about"
+              className="inline-flex items-center justify-center  border-2 border-white/50 px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 hover:scale-105"
             >
               اكتشف المزيد
             </Link>

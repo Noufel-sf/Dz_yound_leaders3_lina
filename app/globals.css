@@ -58,7 +58,6 @@
 
 body{
    scroll-behavior: smooth;
-   background-color: #000000;
 }
 
 @theme {
@@ -75,7 +74,6 @@ body{
   
   --color-secondary-foreground: #ffffff;
   
-  --color-third:#FF4783 ;
   
   --color-accent: #eaeffe;
 
@@ -166,3 +164,5 @@ body{
      shadow-lg
   */
 }
+
+

@@ -150,7 +150,7 @@ export default function OurValues() {
     <section
       ref={sectionRef}
       id="values"
-      className="relative overflow-hidden px-6 pb-24 pt-20 md:px-20"
+      className="relative overflow-hidden px-6 pb-24 pt-10 md:pt-20 md:px-20"
       dir="rtl"
     >
       {/* Subtle grain overlay */}
@@ -164,11 +164,11 @@ export default function OurValues() {
 
       {/* ── TOP LABEL ── */}
       <div className="values-label mb-16 flex items-center gap-6 md:mb-24">
-        <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30">
+        <span className="font-mono text-lg uppercase tracking-[0.3em] text-primary">
           قيمنا
         </span>
-        <div className="h-px w-12 bg-white/10" />
-        <span className="font-mono text-xs text-white/20">
+        <div className="h-px w-12 bg-primary" />
+        <span className="font-mono text-lg text-primary">
           {value.id} / {String(VALUES.length).padStart(2, '0')}
         </span>
       </div>

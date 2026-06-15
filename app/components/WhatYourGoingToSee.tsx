@@ -90,9 +90,9 @@ export default function WhatYourGoingToSee() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 min-h-screen flex flex-col items-center justify-center w-full overflow-hidden bg-primary-950 text-white"
+      className="relative py-24 min-h-screen flex flex-col items-center justify-center w-full overflow-hidden  text-white"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/90 pointer-events-none" />
+      <div className="absolute inset-0  pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center justify-center px-6 text-center w-full max-w-6xl mx-auto gap-12">
         {/* Heading */}

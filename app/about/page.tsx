@@ -9,6 +9,7 @@ import WhatYourGoingToSee from '../components/WhatYourGoingToSee';
 import ProblemSection from '../components/ProblemSection';
 import Plan from '../components/Plan';
 import SolutionSection from '../components/SolutionSection';
+import FaqSection from '../components/FaqSection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,19 +43,19 @@ export default function AboutPage() {
     <section
       ref={manifestoRef}
       dir="rtl"
-      className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-black px-6 pb-16 pt-32 md:px-20 md:pb-20 md:pt-40"
+      className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-[#0C0C0C]  pb-16 pt-32 md:pb-20 md:pt-40"
     > 
       <div
         ref={manifestoInner}
-        className="flex flex-col justify-between gap-16 will-change-[filter,opacity,transform]"
+        className="flex flex-col px-6 md:px-20 justify-between gap-16 will-change-[filter,opacity,transform]"
       >
         {/* Top: index + label */}
         <div className="flex items-center gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-white/30">
+          <span className="font-mono text-lg uppercase tracking-[0.3em] text-primary">
             من نحن
           </span>
           <div className="h-px flex-1 bg-white/10" />
-          <span className="font-mono text-xs tracking-[0.3em] text-white/30">
+          <span className="font-mono text-lg tracking-[0.3em] text-primary">
             2026
           </span>
         </div>
@@ -94,9 +95,9 @@ export default function AboutPage() {
       </div>
       <WhatYourGoingToSee />
       <ProblemSection />
-      <SolutionSection /> 
       <Plan />
       <Owner />
+      <FaqSection />
     </section>
   );
 }

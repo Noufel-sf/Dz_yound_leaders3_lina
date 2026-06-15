@@ -115,7 +115,7 @@ export default function FaqSection() {
       ref={sectionRef}
       id="faq"
       dir="rtl"
-      className="relative overflow-hidden bg-black px-6 pb-28 pt-20 md:px-20"
+      className="relative overflow-hidden  px-6 pb-28 pt-20 md:px-20"
     >
       {/* ── TOP LABEL ── */}
       <div className="faq-label mb-16 flex items-center gap-6">

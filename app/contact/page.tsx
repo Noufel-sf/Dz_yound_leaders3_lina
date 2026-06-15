@@ -95,7 +95,7 @@ const ContactPage = () => {
                 الموقع
               </p>
               <p className="mt-2 font-display text-xl uppercase">
-                الجزائر / عن بعد
+                ميلة   /  شلغوم العيد   
               </p>
             </div>
             <div className="reveal-text">

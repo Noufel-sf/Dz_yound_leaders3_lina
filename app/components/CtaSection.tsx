@@ -20,7 +20,7 @@ function CtaSection() {
       ).matches;
 
       gsap.to(sectionRef.current, {
-        scale: 0.94,
+        scale: 1,
         opacity: 0,
         y: -80,
         ease: "none",
@@ -39,11 +39,10 @@ function CtaSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative  flex flex-col mt-30 items-center justify-center overflow-hidden  px-4 py-24 sm:px-8 lg:px-12"
+      className="relative  flex flex-col mt-10 md:mt-30 items-center justify-center overflow-hidden  px-4 py-24 sm:px-8 lg:px-12"
       dir="rtl"
       style={{ transformOrigin: "center top" }}
     >
-      <div className="pointer-events-none absolute inset-0 opacity-40 [background:radial-gradient(circle_at_center,rgba(148,163,184,0.12),transparent_55%)]" />
 
       <div className="relative mx-auto max-w-5xl text-center">
         <h2
@@ -69,7 +68,7 @@ function CtaSection() {
         >
           <Link
             href="/about"
-            className=" inline-flex items-center gap-2 border-2  border-black bg-primary px-6 py-3 md:text-lg font-bold text-primary-foreground shadow-[4px_4px_0_0_#111111] hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
+            className=" inline-flex items-center gap-2 border-2  border-black bg-primary px-6 py-3 md:text-lg hover:bg-third hover:text-white transition duration-400 font-bold text-primary-foreground shadow-[4px_4px_0_0_#111111] hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
           >
             تعرف أكثر
             <ArrowLeft className="h-5 w-5" />
@@ -77,7 +76,7 @@ function CtaSection() {
           <a
             target="_blank"
             href=""
-            className=" inline-flex items-center gap-2 border-2 border-black text-white px-8 py-3 md:text-lg font-bold bg-secondary shadow-[4px_4px_0_0_#111111] hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
+            className=" inline-flex items-center gap-2 border-2 border-black text-white px-8 py-3 md:text-lg font-bold bg-secondary hover:bg-secondary/80 transition duration-400 hover:text-black shadow-[4px_4px_0_0_#111111] hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
           >
             انضم الآن
           </a>

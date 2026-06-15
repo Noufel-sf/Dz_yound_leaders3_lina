@@ -17,7 +17,6 @@ export default function Home() {
 
   flowTl.set(testimonialsRef.current, { yPercent: 100 });
 
-
   // Bring in Navbar and Buddy in Product Section
   flowTl.to(testimonialsRef.current, { y: 0, autoAlpha: 1, duration: 0.5 }).to(
     testimonialsRef.current,
@@ -31,19 +30,16 @@ export default function Home() {
     },
     "-=0.3",
   );
-   
-
 
   return (
     <main className="flex w-full flex-col">
-      <HeroSection /> 
+      <HeroSection />
+      <OurValues />
       <ProblemSection />
       <OurVision />
-      <OurValues />
       <TestimonialSection />
       <FaqSection />
-      
-        <CtaSection />
+      <CtaSection />
     </main>
   );
 }

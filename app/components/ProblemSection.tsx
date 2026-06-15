@@ -2,140 +2,101 @@
 
 import { useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { HelpCircle, Sparkles, User } from "lucide-react";
 
-gsap.registerPlugin(ScrollTrigger);
+const PROBLEM_AND_OBJECTIVES_DATA = [
+  {
+    id: "01",
+    title: "الإشكالية",
+    desc: "فجوة واضحة بين التعليم التقليدي ومتطلبات السوق، وضعف في امتلاك أدوات الذكاء الاصطناعي والمسارات التقنية لدى الشباب.",
+    color: "bg-amber-200",
+    textColor: "text-rose-900",
+  },
+  {
+    id: "02",
+    title: "الأهداف",
+    desc: "تمكين الشباب بالمعرفة القيادية والمهارات التقنية الأساسية، وفتح مسارات تخصصية تطبيقية لبناء الكفاءة والجاهزية المهنية.",
+    color: "bg-white",
+    textColor: "text-black",
+  },
+  {
+    id: "03",
+    title: "الحلول",
+    desc: "برنامج تكويني متدرج يجمع بين التعلم التطبيقي، المشاريع الواقعية، والتوجيه المستمر لصناعة أثر حقيقي.",
+    color: "bg-green-700",
+    textColor: "text-white",
+  },
+];
 
-export default function ProblemSection() {
+const ProblemAndObjectives = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-  const itemsContainerRef = useRef<HTMLDivElement>(null);
-
-  const problems = [
-    {
-      text: "الجهل بالتاريخ يضعف الهوية",
-      icon: <span className="text-3xl md:text-4xl text-primary font-bold">?</span>,
-    },
-    {
-      text: "إرثنا مصدر قوة وإلهام",
-      icon: <Sparkles className="w-8 h-8 md:w-10 md:h-10 text-primary" />,
-    },
-    {
-      text: "معرفة الماضي ... تصنع مستقبلا أقوى",
-      icon: <User className="w-8 h-8 md:w-10 md:h-10 text-primary" />,
-    },
-  ];
 
   useGSAP(
     () => {
-      if (!sectionRef.current) return;
+      const cards = gsap.utils.toArray(".problem-card");
 
-      const mm = gsap.matchMedia();
-
-      mm.add(
+      gsap.fromTo(
+        cards,
         {
-          isDesktop: "(min-width: 768px)",
-          isMobile: "(max-width: 767px)",
+          y: 80,
+          opacity: 0,
+          rotate: 2,
         },
-        (context) => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              id: "problem-section",
-              trigger: sectionRef.current,
-              start: "top 80%",
-              end: "bottom top",
-              scrub: 1,
-              invalidateOnRefresh: true,
-            },
-          });
-
-          // Text items fade in from the right
-          if (itemsContainerRef.current) {
-            tl.fromTo(
-              itemsContainerRef.current.children,
-              { x: 50, opacity: 0 },
-              { x: 0, opacity: 1, duration: 1, stagger: 0.2 },
-              0
-            );
-          }
-
-          // Image fades in from the left
-          if (imageRef.current) {
-            tl.fromTo(
-              imageRef.current,
-              { x: -50, opacity: 0, scale: 0.9 },
-              { x: 0, opacity: 1, scale: 1, duration: 1 },
-              0.4
-            );
-          }
-        }
+        {
+          y: 0,
+          opacity: 1,
+          rotate: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        },
       );
-
-      return () => {
-        mm.revert();
-      };
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   return (
     <section
       ref={sectionRef}
-      className="relative py-24 min-h-screen flex items-center justify-center w-full mt-25 overflow-hidden bg-primary-950 text-white"
+      className="relative w-full overflow-hidden bg-primary-950 mt-20 lg:mt-30 py-16 lg:h-screen lg:py-0 px-6 lg:px-12"
     >
+      {/* Title */}
+      <div className="relative flex w-full items-center justify-center px-6 lg:mt-30 lg:px-8">
+        <h2 className="featured text-white heading select-none text-center font-display text-[15vw] uppercase leading-none tracking-tighter sm:text-[11vw]">
+          الاشكالية و
+          <span className="text-primary heading"> الحلول</span>
+        </h2>
+      </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
-           <h2 className="text-7xl md:text-8xl lg:text-9xl font-display heading text-center text-white">
-            لماذا <span className="text-primary heading"> ارث و اثر</span> ؟
-          </h2>
-        <div 
-          className="flex flex-col md:flex-row items-center justify-between   md:rounded-3xl p-8 md:p-16 "
-          dir="rtl"
-        >
-          {/* Right Side (Text Items) */}
-          <div 
-            ref={itemsContainerRef}
-            className="w-full md:w-3/5 flex flex-col gap-10 md:gap-14"
+      {/* Cards */}
+      <div className="relative mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        {PROBLEM_AND_OBJECTIVES_DATA.map((item) => (
+          <div
+            key={item.id}
+            className={` cursor-pointer flex min-h-[58vh] flex-col items-center justify-center border-4 border-black ${item.color} ${item.textColor} px-6 py-12 shadow-[5px_5px_0_0_#111111]`}
           >
-            {problems.map((item, index) => (
-              <div key={index} className="flex items-center gap-6 md:gap-8 group">
-                <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full border-[3px] border-primary/50 bg-black/60 shadow-[0_0_20px_rgba(255,185,0,0.15)] transition-transform group-hover:scale-110 group-hover:border-primary duration-300">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl md:text-3xl lg:text-4xl font-display font-medium text-white/90 leading-relaxed transition-colors duration-300">
-                  {item.text}
-                </h3>
-              </div>
-            ))}
-          </div>
-
-          {/* Left Side (Hourglass) */}
-          <div 
-            ref={imageRef} 
-            className="w-full md:w-2/5 flex justify-center mt-12 md:mt-0 relative"
-          >
-            <div className="relative w-48 h-64 md:w-72 md:h-[400px] rounded-2xl border-2 border-dashed border-primary/40 flex flex-col items-center justify-center bg-black/40 overflow-hidden group">
-              <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors duration-500" />
-              <span className="text-zinc-500 text-center px-4 relative z-10 font-medium">
-                مساحة صورة الساعة
-                <br />
-                <span className="text-sm opacity-70 mt-2 block">(Hourglass Image Placeholder)</span>
+            <div className="service-content flex max-w-4xl flex-col items-center text-center">
+              <span className="mb-4 font-mono text-sm uppercase tracking-widest opacity-40">
+                {item.id}
               </span>
-              {/* Uncomment and use next/image when image is ready
-              <Image
-                src="/hourglass.png"
-                alt="Hourglass"
-                fill
-                className="object-contain"
-              />
-              */}
+
+              <h2 className="mb-6 font-display heading text-5xl uppercase leading-[0.9] md:text-7xl">
+                {item.title}
+              </h2>
+
+              <p className="max-w-xl font-sans text-lg opacity-70">
+                {item.desc}
+              </p>
             </div>
           </div>
-
-        </div>
+        ))}
       </div>
     </section>
   );
-}
+};
+
+export default ProblemAndObjectives;
