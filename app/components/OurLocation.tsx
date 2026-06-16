@@ -5,10 +5,10 @@ function OurLocation() {
         <div className="mb-10 flex flex-col items-center gap-3 text-center">
         
           <h1 className="heading text-[3.4rem] font-black leading-[1.1] tracking-tight text-white sm:text-[3.2rem] lg:text-[6rem]">
-            موقع <span className="text-primary heading">ارث و اثر</span>
+            موقع <span className="text-primary heading">البرنامج</span>
           </h1>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white sm:text-base">
-            زورونا في المقر الرئيسي، أو استخدم الخريطة لتحديد أسرع طريق للوصول.
+          استكشفوا خريطة رحلة القادة الشباب في كل حلقة، واكتشفوا محطات النجاح الملهمة والإنجازات التي تصنع الأمل.
           </p>
         </div>
 
