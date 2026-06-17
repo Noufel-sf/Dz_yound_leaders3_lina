@@ -48,15 +48,10 @@ export default function ProblemAndObjectives() {
       <div className="mx-auto w-full max-w-6xl space-y-14">
         {/* ── Header ─────────────────────────────────────────── */}
         <div className="pr-6">
-              <div className="">
-                     <Image
-                       src="/img.svg"
-                       alt="فريق انطلاقتك"
-                       width={78}
-                       height={78}
-                     />
-                   </div>
-         
+          <div className="">
+            <Image src="/img.svg" alt="فريق انطلاقتك" width={78} height={78} />
+          </div>
+
           <h2 className="heading text-4xl font-black leading-tight text-slate-900 sm:text-6xl">
             الإشكالية،{" "}
             <span className="relative text-primary marker-underline heading">
@@ -92,7 +87,7 @@ export default function ProblemAndObjectives() {
             <p className="heading text-2xl font-bold uppercase tracking-widest text-rose-500 mb-4">
               الإشكالية
             </p>
-               <h3 className="heading text-xl font-extrabold text-red-900 sm:text-xl leading-snug">
+            <h3 className="heading text-xl font-extrabold text-red-900 sm:text-xl leading-snug">
               تمكين الفئة المستهدفة من امتلاك أدوات المستقبل
             </h3>
 

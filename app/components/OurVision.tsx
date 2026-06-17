@@ -57,7 +57,7 @@ export default function AboutLayerOne({
             { y: 0, opacity: 1, stagger: 0.1, duration: 1 },
             0,
           )
-          .fromTo(
+            .fromTo(
               headline.querySelector(".sub-header"),
               { y: 30, opacity: 0 },
               { y: 0, opacity: 1, duration: 1 },
@@ -94,15 +94,15 @@ export default function AboutLayerOne({
         ref={headlineRef}
         className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 text-center"
       >
-        <h2 className="header-title -rotate-2 flex flex-col items-center heading justify-center gap-x-6 font-display text-[15vw] uppercase leading-none tracking-tighter  md:flex-row md:text-[15rem]">
-          <span className=" heading text-white">رؤيتنا </span>
-          <span className=" heading text-primary">للمجتمع ؟</span>
+        <h2 className="header-title -rotate-2 flex flex-col items-center heading justify-center gap-x-6 font-display text-[15vw] uppercase leading-none tracking-tighter  md:flex-row md:text-[12rem]">
+          <span className=" heading text-primary">رؤيتنا</span>
+          <span className=" heading text-white"> للمجتمع الجزائري </span>
         </h2>
-        <p className="sub-header mt-8 max-w-4xl font-display text-white/80 text-lg uppercase tracking-tight md:mt-12 md:text-3xl">
-          منذ 2016، يعمل مخيم رواد الشباب على تمكين الشباب من تطوير المهارات
-          القيادية والمشاركة المدنية، ودعمهم في بناء مشاريع مجتمعية مستدامة.
-          نقدّم ورش عمل، تدريبًا عمليًا، وبرامج توجيهية تهدف إلى إعداد الجيل
-          القادم من القادة والمبادرات المحلية.
+        <p className="sub-header mt-8 max-w-4xl leading-10 font-display text-white/80 text-lg uppercase tracking-tight md:mt-12 md:text-3xl">
+          تتمحور رؤيتنا حول إحياء التراث الجزائري الغني من خلال محتوى عصري
+          وجذاب، يربط الشباب بجذورهم ويعزز لديهم الشعور بالانتماء والاعتزاز
+          بثقافتهم، وذلك عبر منصة تفاعلية تجمع بين المعرفة والترفيه وتفتح آفاقًا
+          جديدة للإبداع والمشاركة المجتمعية.
         </p>
       </div>
     </section>

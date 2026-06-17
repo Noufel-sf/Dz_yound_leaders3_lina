@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Owner from '../components/Owner';
-import WhatYourGoingToSee from '../components/WhatYourGoingToSee';
-import ProblemSection from '../components/ProblemSection';
-import Plan from '../components/Plan';
-import SolutionSection from '../components/SolutionSection';
-import FaqSection from '../components/FaqSection';
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Owner from "../components/Owner";
+import WhatYourGoingToSee from "../components/WhatYourGoingToSee";
+import ProblemSection from "../components/ProblemSection";
+import Plan from "../components/Plan";
+import SolutionSection from "../components/SolutionSection";
+import FaqSection from "../components/FaqSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,8 +23,8 @@ export default function AboutPage() {
     if (manifestoRef.current && manifestoInner.current) {
       ScrollTrigger.create({
         trigger: manifestoRef.current,
-        start: 'top top',
-        end: 'bottom top',
+        start: "top top",
+        end: "bottom top",
         scrub: 1,
         pin: false,
         onUpdate: (self) => {
@@ -44,7 +44,7 @@ export default function AboutPage() {
       ref={manifestoRef}
       dir="rtl"
       className="relative flex min-h-screen flex-col justify-between overflow-hidden bg-[#0C0C0C]  pb-16 pt-32 md:pb-20 md:pt-40"
-    > 
+    >
       <div
         ref={manifestoInner}
         className="flex flex-col px-6 md:px-20 justify-between gap-16 will-change-[filter,opacity,transform]"
@@ -63,16 +63,20 @@ export default function AboutPage() {
         {/* Centre: manifesto text */}
         <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
           <h1 className="heading text-[15vw] font-black uppercase leading-[1.1] tracking-tighter text-white md:text-[11vw]">
-            نصنع 
-            وعياً 
+            نصنع وعياً
             <span className="text-primary heading mr-2">سياسياً</span> <br />
             مستداماً.
           </h1>
 
           <div className="flex max-w-sm flex-col gap-6 pb-2">
             <p className="font-sans text-base leading-relaxed text-white/60">
-              مشروع البوصلة هو مساحة للشباب الجزائري الطموح لفهم آليات العمل
-              المؤسساتي، صناعة القرار، وبناء مسار قيادي يخدم الوطن.
+              مشروع ارث و اثر هو مبادرة شبابية مختارة من مشروع{" "}
+              <span className="text-primary mr-2">
+                dz young leaders
+              </span>{" "}
+              تهدف إلى إحياء الذاكرة الوطنية وصناعة محتوى إعلامي متخصص في
+              التراث والتاريخ الجزائري، وذلك عبر حلقات تفاعلية ترتقي بالوعي
+              الجمعي نحو تعزيز الهوية الجزائرية والمساهمة في الحفاظ على كنوزها.
             </p>
             <div className="flex items-center gap-3">
               <div className="h-px w-8 bg-primary" />
@@ -101,4 +105,3 @@ export default function AboutPage() {
     </section>
   );
 }
-  

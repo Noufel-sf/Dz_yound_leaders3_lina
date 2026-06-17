@@ -8,21 +8,21 @@ const PROBLEM_AND_OBJECTIVES_DATA = [
   {
     id: "01",
     title: "الإشكالية",
-    desc: "فجوة واضحة بين التعليم التقليدي ومتطلبات السوق، وضعف في امتلاك أدوات الذكاء الاصطناعي والمسارات التقنية لدى الشباب.",
+    desc:"يعاني العديد من الشباب الجزائري من نقص المعرفة بتاريخ الجزائر قبل سنة 1830، حيث يتركز اهتمامهم غالبًا على فترة الاستعمار الفرنسي فقط، مما يضعف ارتباطهم بجذورهم التاريخية وهويتهم الوطنية، في ظل انتشار محتوى أجنبي قد يقدّم التاريخ الجزائري بصورة غير دقيقة أو غير مناسبة للجيل الحالي.",
     color: "bg-amber-200",
     textColor: "text-rose-900",
   },
   {
     id: "02",
     title: "الأهداف",
-    desc: "تمكين الشباب بالمعرفة القيادية والمهارات التقنية الأساسية، وفتح مسارات تخصصية تطبيقية لبناء الكفاءة والجاهزية المهنية.",
+    desc: "إنتاج ونشر سلسلة من  12حلقة بودكاست عالية الجودة تسلط الضوء على تاريخ الجزائر القديم والوسيط، بهدف الوصول إلى 50,000مشاهدة وتفاعل من الشباب الجزائري عبر منصات التواصل الاجتماعي في غضون 6أشهر",
     color: "bg-white",
     textColor: "text-black",
   },
   {
     id: "03",
     title: "الحلول",
-    desc: "برنامج تكويني متدرج يجمع بين التعلم التطبيقي، المشاريع الواقعية، والتوجيه المستمر لصناعة أثر حقيقي.",
+    desc: "إنتاج محتوى تاريخي جذّاب بأسلوب روائي معاصر، يستهدف الشباب بشكل مباشر عبر بودكاست وسوشيال ميديا، مدعوماً بشراكات مع مؤرخين ومبدعين جزائريين لنقل المعرفة بثقة وحرفية.",
     color: "bg-green-700",
     textColor: "text-white",
   },
@@ -77,7 +77,7 @@ const ProblemAndObjectives = () => {
         {PROBLEM_AND_OBJECTIVES_DATA.map((item) => (
           <div
             key={item.id}
-            className={` cursor-pointer flex min-h-[58vh] flex-col items-center justify-center border-4 border-black ${item.color} ${item.textColor} px-6 py-12 shadow-[5px_5px_0_0_#111111]`}
+            className={` cursor-pointer hover:scale-[1.02] transition-all duration-300 flex min-h-[58vh] flex-col items-center justify-center border-4 border-black ${item.color} ${item.textColor} px-6 py-12 shadow-[5px_5px_0_0_#111111]`}
           >
             <div className="service-content flex max-w-4xl flex-col items-center text-center">
               <span className="mb-4 font-mono text-sm uppercase tracking-widest opacity-40">

@@ -2,14 +2,8 @@
 
 import React, { forwardRef, useRef } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { usePathname } from "next/navigation";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+
 
 interface FooterProps {
   onScrollToTop?: () => void;

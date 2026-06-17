@@ -37,7 +37,7 @@ export default function AccordionItem({ item }: AccordionItemProps) {
           {item.question}
         </span>
 
-        <span className="flex h-8 w-8 shrink-0 items-center justify-center bg-primary transition-all duration-300 group-hover:scale-105">
+        <span className="flex h-8 w-8 shrink-0 items-center text-black justify-center bg-primary transition-all duration-300 group-hover:scale-105">
           {open ? (
             <Minus size={14} strokeWidth={2.2} />
           ) : (

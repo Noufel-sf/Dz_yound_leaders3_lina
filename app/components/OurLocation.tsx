@@ -12,7 +12,7 @@ function OurLocation() {
           </p>
         </div>
 
-        <div className="relative overflow-hidden  border-4 border-black rotate-1 hover:rotate-3 transition duration-500 bg-white shadow-[10px_10px_0_0_rgba(246,187,4,1)]">
+        <div className="relative overflow-hidden  border-4 border-black  transition duration-500 bg-white shadow-[10px_10px_0_0_rgba(246,187,4,1)]">
          
           <div className="relative h-[320px] sm:h-[420px] lg:h-[520px] bg-slate-200">
             <iframe
@@ -39,7 +39,7 @@ function OurLocation() {
               href="https://www.google.com/maps?ll=36.161335,6.168061&q=36.1613346323918,6.1680614890718735"
               target="_blank"
               rel="noopener noreferrer"
-              className="heading inline-flex items-center justify-center rounded-full border-2 border-black bg-primary px-5 py-2 text-sm font-bold text-black shadow-[3px_3px_0_0_#111111] transition-transform hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
+              className="heading inline-flex items-center justify-center  border-2 border-black bg-primary px-5 py-2 text-sm font-bold text-black shadow-[3px_3px_0_0_#111111] transition-transform hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none"
             >
               افتح على الخريطة
             </a>
