@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HistoryButton from "../components/ui/HistoryButton";
 import { ScrollToPlugin } from "gsap/all";
 import OurLocation from "../components/OurLocation";
+import Image from "next/image";
 import { Factory } from "lucide-react";
 import FaqSection from "../components/FaqSection";
 
@@ -78,6 +79,27 @@ const ContactPage = () => {
     >
       {/*HEADER */}
       <section className="px-6 pt-32 md:px-20 md:pt-40">
+        <Image
+          src="/heromobile.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover md:hidden"
+        />
+
+        {/* Desktop Background */}
+        <Image
+          src="/hero2.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="hidden object-cover md:block"
+        />
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
         <div className="flex items-end justify-between gap-2 pb-8 md:gap-0">
           <h1 className="reveal-text heading font-display text-5xl uppercase md:text-8xl">
             تواصل معنا
@@ -95,7 +117,7 @@ const ContactPage = () => {
                 الموقع
               </p>
               <p className="mt-2 font-display text-xl uppercase">
-                ميلة   /  شلغوم العيد   
+                ميلة / شلغوم العيد
               </p>
             </div>
             <div className="reveal-text">
@@ -135,7 +157,7 @@ const ContactPage = () => {
       </section>
 
       {/*SOCIAL GRID  */}
-      <section className="mt-32 grid grid-cols-2 border-t border-white/10">
+      <section className="mt-72 grid grid-cols-2 border-t border-white/10">
         {SOCIAL_LINKS.map((social) => (
           <a
             key={social.name}
