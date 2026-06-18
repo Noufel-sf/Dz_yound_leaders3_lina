@@ -52,7 +52,7 @@ export default function AboutPage() {
       >
         {/* Mobile Background */}
         <Image
-          src="/heromobile.png"
+          src="/heromobile2.png"
           alt=""
           fill
           priority
@@ -62,7 +62,7 @@ export default function AboutPage() {
 
         {/* Desktop Background */}
         <Image
-          src="/hero2.png"
+          src="/hero3.png"
           alt=""
           fill
           priority
@@ -93,7 +93,7 @@ export default function AboutPage() {
           </h1>
 
           <div className="flex max-w-sm flex-col gap-6 pb-2">
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/90">
               مشروع إرث وأثر هو مبادرة شبابية مختارة من مشروع
               <span className="text-primary m-2">DZ Young Leaders</span>
               تهدف إلى إحياء الذاكرة الوطنية وصناعة محتوى إعلامي متخصص في التراث

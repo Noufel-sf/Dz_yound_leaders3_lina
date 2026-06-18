@@ -80,7 +80,7 @@ const ContactPage = () => {
       {/*HEADER */}
       <section className="px-6 pt-32 md:px-20 md:pt-40">
         <Image
-          src="/heromobile.png"
+          src="/heromobile2.png"
           alt=""
           fill
           priority
@@ -90,7 +90,7 @@ const ContactPage = () => {
 
         {/* Desktop Background */}
         <Image
-          src="/hero2.png"
+          src="/hero3.png"
           alt=""
           fill
           priority

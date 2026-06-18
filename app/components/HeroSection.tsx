@@ -9,7 +9,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Mobile Background */}
       <Image
-        src="/heromobile.png"
+        src="/heromobile2.png"
         alt=""
         fill
         priority
@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       {/* Desktop Background */}
       <Image
-        src="/hero2.png"
+        src="/hero3.png"
         alt=""
         fill
         priority
