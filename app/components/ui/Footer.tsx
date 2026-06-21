@@ -111,11 +111,11 @@ const Footer = forwardRef<HTMLElement, FooterProps>(() => {
               <span>
                 Designed & Built by{" "}
                 <a
-                  href="https://itswabs.vercel.app/"
+                  href="https://my-portfolio-pi-nine-27.vercel.app/"
                   target="new"
                   className="uppercase text-white/50 transition-colors hover:text-primary"
                 >
-                  wabs
+                  NSF
                 </a>
               </span>
             </p>

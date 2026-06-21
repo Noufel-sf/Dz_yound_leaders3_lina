@@ -1,11 +1,23 @@
-
-export const episods: Event[] = [
+export interface Episode {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  location: string;
+  attendees: number;
+  duration: string;
+  link: string;
+  tags: string[];
+  gradient: string;
+}
+export const episods: Episode[] = [
   {
     id: "1",
     title: "ورشة التربية النفسية",
     description:
       "للتوعية والتحسيس بالأمراض والاضطرابات النفسية للأفراد والمجتمع وطرق التعامل معها",
-    image: "/e3.jpg",
+    image: "/ep1.png",
     date: "15 يناير 2026",
     location: "  دار الشباب",
     attendees: 45,
@@ -19,7 +31,7 @@ export const episods: Event[] = [
     title: "ورشة المهارات الحياتية",
     description:
       "سلسلة من الورشات التدريبية في المهارات الحياتية 💡ضمن برنامج العطلة الشتوية",
-    image: "/e3.jpg",
+    image: "/ep1.png",
     date: "22 يناير 2026",
     location: "  دار الشباب",
     attendees: 200,
@@ -34,7 +46,7 @@ export const episods: Event[] = [
     title: "الملتقى التوجيهي",
     description:
       "للتعرف على التخصصات الجامعية المتاحة ومساعدتك في اتخاذ القرار الأفضل لمسارك الأكاديمي",
-    image: "/e3.jpg",
+    image: "/ep1.png",
     date: "5 فبراير 2026",
     location: "  دار الشباب",
     attendees: 80,
@@ -49,7 +61,7 @@ export const episods: Event[] = [
     title: "صناعة البودكاست🎙",
     description:
       "منصة للشباب المبدعين لعرض أفكارهم ومشاريعهم الابتكارية. فرصة للتواصل مع رواد الأعمال والمستثمرين.",
-    image: "/e3.jpg",
+    image: "/ep1.png",
     date: "10 ديسمبر 2025",
     link: "https://www.facebook.com/share/p/17jZwUMnRe/",
     location: "  دار الشباب",
@@ -63,7 +75,7 @@ export const episods: Event[] = [
     title: "دورة الشباب القائد",
     description:
       " فرصة جديدة للتكوين، للتعبير، للتعلم، وللتميز وتبادل الافكار وتعلم المهارات القيادية",
-    image: "/e3.jpg",
+    image: "/ep1.png",
     date: "28 نوفمبر 2025",
     location: "  دار الشباب",
     attendees: 60,
@@ -78,7 +90,7 @@ export const episods: Event[] = [
     title: "ملتفى الشباب",
     description:
       "فرصة للشباب للتواصل، تبادل الأفكار، وتنظيم الأنشطة المجتمعية في جو من التعاون والابتكار.",
-    image: "/e3.jpg",
+    image: "/ep1.png",
     date: "15 نوفمبر 2025",
     location: "  دار الشباب",
     attendees: 150,

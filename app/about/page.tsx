@@ -11,6 +11,7 @@ import ProblemSection from "../components/ProblemSection";
 import Plan from "../components/Plan";
 import SolutionSection from "../components/SolutionSection";
 import FaqSection from "../components/FaqSection";
+import CtaSection from "../components/CtaSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -123,6 +124,7 @@ export default function AboutPage() {
       <ProblemSection />
       <Plan />
       <Owner />
+      <CtaSection />
       <FaqSection />
     </section>
   );

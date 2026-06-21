@@ -14,7 +14,7 @@ export default function HeroSection() {
         fill
         priority
         sizes="100vw"
-        className="object-cover md:hidden"
+        className=" md:hidden"
       />
 
       {/* Desktop Background */}
@@ -24,7 +24,7 @@ export default function HeroSection() {
         fill
         priority
         sizes="100vw"
-        className="hidden object-cover md:block"
+        className="hidden  object-cover md:block"
       />
 
       {/* Dark Overlay */}
@@ -70,7 +70,7 @@ export default function HeroSection() {
               href="/contact"
               className="inline-flex items-center justify-center bg-secondary px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:brightness-110 hover:shadow-2xl hover:scale-105"
             >
-              احجز الآن
+              تواصل معنا
             </Link>
 
             <Link

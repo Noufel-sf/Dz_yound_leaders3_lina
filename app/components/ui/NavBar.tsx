@@ -71,14 +71,7 @@ const NavBar = forwardRef<HTMLDivElement>((props, ref) => {
 
       <nav
         ref={navRef}
-        className="
-fixed top-0 left-0 z-50
-flex h-20 w-full items-center justify-between
-px-6 md:px-12
-backdrop-blur-xl
-bg-black/20
-
-      "
+        className="fixed top-0 left-0 z-50 flex h-20 w-full items-center justify-between px-6 md:px-12 backdrop-blur-xl bg-black/20"
       >
         {/* LEFT SECTION */}
         <div className="pointer-events-auto order-1 flex flex-1 items-center justify-start md:order-0">
@@ -114,16 +107,16 @@ bg-black/20
 
         {/* RIGHT */}
         <div className="pointer-events-auto order-2 flex flex-1 items-center justify-end gap-4 md:order-0">
-          <a href="">
+          <Link href="/contact">
             <HistoryButton
-              text="انضم الينا"
+              text="تواصل معنا"
               bgColor="#ffd230"
               shadowColor="#ffd230"
               paddingX="px-6"
               paddingY="py-2"
               fontSize="text-base"
             />
-          </a>
+          </Link>
 
           {/* Mobile Menu */}
           <div

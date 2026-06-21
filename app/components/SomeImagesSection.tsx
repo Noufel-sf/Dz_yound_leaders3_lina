@@ -7,17 +7,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 const cards = [
-  { img: "/img1.jpg", rotate: "-2" },
-  { img: "/img1.jpg", rotate: "3" },
-  { img: "/img1.jpg", rotate: "-1" },
-  { img: "/img1.jpg", rotate: "4" },
-  { img: "/img1.jpg", rotate: "-3" },
-  { img: "/img1.jpg", rotate: "2" },
+  { img: "/p1.jpg", rotate: "-2" },
+  { img: "/p2.jpg", rotate: "3" },
+  { img: "/p3.jpg", rotate: "-1" },
+  { img: "/p4.jpg", rotate: "4" },
+  { img: "/p5.jpg", rotate: "-3" },
+  { img: "/p6.jpg", rotate: "2" },
 ];
 
 const TestimonialCard = ({ img, rotate }: { img: string; rotate: string }) => (
   <div
-    className="testimonial-card m-4 flex aspect-square shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-3xl shadow-xl transition-all md:m-8"
+    className="testimonial-card m-4 flex aspect-square shrink-0 cursor-pointer items-center justify-center overflow-hidden border-4 shadow-[10px_10px_0_0_rgba(246,187,4,1)] border-white  transition-all md:m-8"
     style={{
       width: "clamp(20rem, 35vmin, 30rem)",
       transform: `rotate(${rotate}deg)`,

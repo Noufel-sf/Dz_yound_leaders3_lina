@@ -14,7 +14,6 @@ import EpisodsSection from "./components/EpisodsSection";
 
 export default function Home() {
   const testimonialsRef = useRef<HTMLDivElement>(null);
-  const CtaSectionRef = useRef<HTMLDivElement>(null);
   const flowTl = gsap.timeline({ paused: true });
 
   flowTl.set(testimonialsRef.current, { yPercent: 100 });

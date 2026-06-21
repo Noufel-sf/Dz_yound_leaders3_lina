@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,15 +17,15 @@ export default function WhatYourGoingToSee() {
   const items = [
     {
       title: "الممالك والإمارات الجزائرية",
-      image: "/placeholder-kingdoms.png",
+      image: "/m1.png",
     },
     {
       title: "الحضارات الإسلامية",
-      image: "/placeholder-islamic.png",
+      image: "/m2.png",
     },
     {
       title: "الجذور النوميدية",
-      image: "/placeholder-numidia.png",
+      image: "/m2.png",
     },
   ];
 
@@ -123,23 +124,19 @@ export default function WhatYourGoingToSee() {
           {items.map((item, index) => (
             <div key={index} className="flex flex-col items-center gap-6">
               <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border-[3px] border-primary/60 p-2 overflow-hidden shadow-[0_0_30px_rgba(255,185,0,0.15)] transition-transform hover:scale-105 duration-300">
-                <div className="w-full h-full rounded-full bg-zinc-900/80 flex items-center justify-center overflow-hidden border border-white/10 relative">
+                <div className="w-full h-full relative">
                   {/* Placeholder div until images are provided */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-zinc-500 text-sm px-4 text-center">
-                      مساحة الصورة
-                      <br />
-                      {item.title}
-                    </span>
+                  
                   </div>
-                  {/* Uncomment and use next/image when images are provided
                   <Image
                     src={item.image}
                     alt={item.title}
-                    fill
+                    width={300}
+                    height={300}
                     className="object-cover"
                   />
-                  */}
+                 
                 </div>
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-center text-white/90 max-w-[200px]">
