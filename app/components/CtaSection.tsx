@@ -4,7 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { ArrowLeft } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Link from "next/link";
+import TransitionLink from "./ui/TransitionLink";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -133,13 +133,13 @@ function CtaSection() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-          <Link
+          <TransitionLink
             href="/about"
             className="inline-flex items-center gap-2 border-2 border-black bg-primary px-6 py-3 font-bold text-primary-foreground shadow-[4px_4px_0_0_#111111] transition hover:bg-third hover:text-white hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none md:text-lg"
           >
             تعرف أكثر
             <ArrowLeft className="h-5 w-5" />
-          </Link>
+          </TransitionLink>
 
           <a
             href=""

@@ -1,7 +1,8 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import Preloader2 from './Preloader2';
+import { PageTransitionProvider } from '../context/PageTransitionContext';
+import PageTransitionOverlay from './PageTransitionOverlay';
 
 const NavBar = dynamic(() => import('../components/ui/NavBar'), {
   ssr: false,
@@ -11,16 +12,15 @@ const Footer = dynamic(() => import('../components/ui/Footer'), {
   ssr: false,
 });
 
-    
-
-export default function LayoutWrapper({ children }: { children: React.ReactNode  }) {
-    
+export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <Preloader2 />
+    <PageTransitionProvider>
+      {/* GSAP curtain overlay — sits above everything during transitions */}
+      <PageTransitionOverlay />
+
       <NavBar />
       {children}
       <Footer />
-    </>
+    </PageTransitionProvider>
   );
 }

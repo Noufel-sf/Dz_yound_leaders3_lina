@@ -56,6 +56,7 @@ export default function AboutPage() {
           src="/heromobile2.png"
           alt=""
           fill
+          loading="eager"
           priority
           sizes="100vw "
           className="object-cover md:hidden block  z-0"
@@ -64,11 +65,12 @@ export default function AboutPage() {
         {/* Desktop Background */}
         <Image
           src="/hero3.png"
-          alt=""
+          alt="hero background"
           fill
+          loading="eager"
           priority
           sizes="100vw"
-          className="hidden md:block object-cover -z-10"
+          className="hidden md:block object-cover z-0"
         />
 
         {/* Overlay */}

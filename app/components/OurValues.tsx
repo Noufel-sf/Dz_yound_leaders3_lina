@@ -164,7 +164,7 @@ export default function OurValues() {
     <section
       ref={sectionRef}
       id="values"
-      className="relative overflow-hidden px-6 pb-24 pt-10 md:pt-20 md:px-20"
+      className="relative overflow-hidden h-screen px-6 pb-24 pt-10 md:pt-20 md:px-20"
       dir="rtl"
     >
       {/* Subtle grain overlay */}
@@ -207,7 +207,7 @@ export default function OurValues() {
         </div>
 
         {/* Description + nav side */}
-        <div ref={descRef} className="flex max-w-sm flex-col gap-10 pb-2">
+        <div ref={descRef} className="flex  max-w-sm flex-col gap-10 pb-2">
           <p className="text-right text-base leading-relaxed text-white/60 md:text-lg">
             {value.desc}
           </p>

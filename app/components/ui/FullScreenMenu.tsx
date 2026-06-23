@@ -1,9 +1,10 @@
 'use client';
 import { useRef, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import TransitionLink from './TransitionLink';
+import { usePageTransition } from '../../context/PageTransitionContext';
 
 const MENU_LINKS = [
   { key: 'الرئيسية', href: '/' },
@@ -18,9 +19,7 @@ export default function FullScreenMenu({
   isOpen: boolean;
   onClose: () => void;
 }) {
-
-
-  const router = useRouter();
+  const { navigate } = usePageTransition();
   const pathname = usePathname();
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,6 +44,8 @@ export default function FullScreenMenu({
         onComplete: () => {
           gsap.set(containerRef.current, { visibility: 'hidden' });
           onClose();
+          // Navigate AFTER the menu has closed
+          navigate(href);
         },
       });
 
@@ -71,17 +72,9 @@ export default function FullScreenMenu({
         )
         .to(
           waveContainerRef.current,
-          { y: '-130%', duration: 1, ease: 'power4.inOut' },
-          '+=0.7'
+          { y: '-130%', duration: 0.8, ease: 'power4.inOut' },
+          '+=0.1'
         );
-
-      exitTl.call(
-        () => {
-          router.push(href);
-        },
-        [],
-        '-=0.6'
-      );
     }
   );
 
@@ -96,7 +89,6 @@ export default function FullScreenMenu({
   useGSAP(
     () => {
       if (isOpen) {
-        // Kill any running timeline before starting open
         if (tl.current) tl.current.kill();
         tl.current = gsap.timeline();
 
@@ -155,7 +147,6 @@ export default function FullScreenMenu({
         const exitTl = gsap.timeline({
           onComplete: () => {
             gsap.set(containerRef.current, { visibility: 'hidden' });
-
             gsap.set(linksRef.current, { clearProps: 'all' });
           },
         });
@@ -214,7 +205,7 @@ export default function FullScreenMenu({
             <span className="text-xl leading-none">✕</span>
           </div>
         </button>
-     
+
         {/* NAVIGATION */}
         <nav className="flex flex-col items-center gap-3 md:gap-6">
           {MENU_LINKS.map((link, i) => (
@@ -225,13 +216,13 @@ export default function FullScreenMenu({
                 if (el) linksRef.current[i] = el;
               }}
             >
-              <Link
+              <TransitionLink
                 href={link.href}
-                onClick={(e) => handleLinkClick(e, link.href, i)}
+                onClick={(e: React.MouseEvent) => handleLinkClick(e, link.href, i)}
                 className="block text-5xl leading-[0.85] font-black tracking-tighter text-white uppercase transition-all duration-300 hover:scale-105 hover:text-primary md:text-[8rem]"
               >
                 {link.key}
-              </Link>
+              </TransitionLink>
             </div>
           ))}
         </nav>

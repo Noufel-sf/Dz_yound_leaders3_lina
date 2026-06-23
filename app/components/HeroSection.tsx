@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import TransitionLink from "./ui/TransitionLink";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -66,19 +66,19 @@ export default function HeroSection() {
             className="flex flex-row gap-4 sm:gap-6 items-center justify-center animate-slideDown"
             style={{ animationDelay: "0.4s" }}
           >
-            <Link
+            <TransitionLink
               href="/contact"
               className="inline-flex items-center justify-center bg-secondary px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:brightness-110 hover:shadow-2xl hover:scale-105"
             >
               تواصل معنا
-            </Link>
+            </TransitionLink>
 
-            <Link
+            <TransitionLink
               href="/about"
               className="inline-flex items-center justify-center border-2 border-white/50 px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-white/10 hover:scale-105"
             >
               اكتشف المزيد
-            </Link>
+            </TransitionLink>
           </div>
         </div>
       </div>

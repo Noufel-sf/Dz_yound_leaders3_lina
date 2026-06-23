@@ -4,7 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import Link from "next/link";
+import TransitionLink from "./ui/TransitionLink";
 
 const cards = [
   { img: "/p1.jpg", rotate: "-2" },
@@ -119,12 +119,12 @@ export default function TestimonialSection() {
       </div>
 
       <div className="testimonial-footer z-10 flex flex-col items-center gap-6 md:mb-[2vh] md:gap-[3vh]">
-       <Link
+       <TransitionLink
               href="/about"
               className="inline-flex bg-secondary items-center justify-center   px-6 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:border-white hover:bg-primary hover:text-black hover:scale-105"
             >
               اكتشف المزيد
-            </Link>
+            </TransitionLink>
       </div>
     </section>
   );

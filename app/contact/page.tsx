@@ -53,7 +53,7 @@ const ContactPage = () => {
         start: "top -20",
         onEnter: () => {
           gsap.to(navContainerRef.current, {
-            y: -100,
+            y: -140,
             autoAlpha: 0,
             duration: 0.4,
             ease: "power2.inOut",
@@ -83,6 +83,7 @@ const ContactPage = () => {
           src="/heromobile2.png"
           alt=""
           fill
+          loading="eager"
           priority
           sizes="100vw"
           className="object-cover md:hidden"
@@ -93,6 +94,7 @@ const ContactPage = () => {
           src="/hero3.png"
           alt=""
           fill
+          loading="eager"
           priority
           sizes="100vw"
           className="hidden object-cover md:block"

@@ -22,7 +22,7 @@ export default function BimoButton({
   paddingY = 'py-4',
   fontSize = 'text-md',
   className = '',
-  textColor = '#000',
+  textColor = '#fff',
 }: BimoButtonProps) {
   const buttonRef = useRef<HTMLDivElement>(null);
   const waveContainerRef = useRef<HTMLDivElement>(null);

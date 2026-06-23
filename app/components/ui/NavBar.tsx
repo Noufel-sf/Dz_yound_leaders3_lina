@@ -1,10 +1,9 @@
 "use client";
 
 import { forwardRef, useRef, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import FullScreenMenu from "./FullScreenMenu";
 import HistoryButton from "./HistoryButton";
+import TransitionLink from "./TransitionLink";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,17 +14,9 @@ gsap.registerPlugin(ScrollTrigger);
 const NavBar = forwardRef<HTMLDivElement>((props, ref) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const pathname = usePathname();
-
   const navRef = useRef<HTMLElement | null>(null);
 
-  const handleNavigation = (e: React.MouseEvent, href: string) => {
-    e.preventDefault();
 
-    if (href === pathname) return;
-
-    window.location.href = href;
-  };
 
   useGSAP(() => {
     if (!navRef.current) return;
@@ -85,29 +76,25 @@ const NavBar = forwardRef<HTMLDivElement>((props, ref) => {
           </div>
 
           {/* Mobile Logo */}
-          <Link
-            href="/"
-            onClick={(e) => handleNavigation(e, "/")}
-            className="md:hidden"
-          >
+          <TransitionLink href="/" className="md:hidden">
             <h1 className="heading text-3xl font-bold text-primary">
               ارث و اثر
             </h1>
-          </Link>
+          </TransitionLink>
         </div>
 
         {/* CENTER LOGO */}
         <div className="pointer-events-auto absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block">
-          <Link href="/" onClick={(e) => handleNavigation(e, "/")}>
+          <TransitionLink href="/">
             <h1 className="heading text-3xl font-bold text-primary">
               ارث و اثر
             </h1>
-          </Link>
+          </TransitionLink>
         </div>
 
         {/* RIGHT */}
         <div className="pointer-events-auto order-2 flex flex-1 items-center justify-end gap-4 md:order-0">
-          <Link href="/contact">
+          <TransitionLink href="/contact">
             <HistoryButton
               text="تواصل معنا"
               bgColor="#ffd230"
@@ -116,7 +103,7 @@ const NavBar = forwardRef<HTMLDivElement>((props, ref) => {
               paddingY="py-2"
               fontSize="text-base"
             />
-          </Link>
+          </TransitionLink>
 
           {/* Mobile Menu */}
           <div
