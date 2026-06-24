@@ -17,11 +17,11 @@ export default function WhatYourGoingToSee() {
   const items = [
     {
       title: "الممالك والإمارات الجزائرية",
-      image: "/m1.png",
+      image: "/m2.png",
     },
     {
       title: "الحضارات الإسلامية",
-      image: "/m2.png",
+      image: "/m1.png",
     },
     {
       title: "الجذور النوميدية",
@@ -35,51 +35,45 @@ export default function WhatYourGoingToSee() {
 
       const mm = gsap.matchMedia();
 
-      mm.add(
-        {
-          isDesktop: "(min-width: 768px)",
-          isMobile: "(max-width: 767px)",
-        },
-        (context) => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              id: "what-you-see-section",
-              trigger: sectionRef.current,
-              start: "top 80%",
-              end: "bottom top",
-              scrub: 1,
-              invalidateOnRefresh: true,
-            },
-          });
+      mm.add("(min-width: 768px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            id: "what-you-see-section",
+            trigger: sectionRef.current,
+            start: "top 80%",
+            end: "bottom top",
+            scrub: 1,
+            invalidateOnRefresh: true,
+          },
+        });
 
-          if (headlineRef.current) {
-            tl.fromTo(
-              headlineRef.current,
-              { y: 50, opacity: 0 },
-              { y: 0, opacity: 1, duration: 1 },
-              0
-            );
-          }
-
-          if (subtitleRef.current) {
-            tl.fromTo(
-              subtitleRef.current,
-              { y: 30, opacity: 0 },
-              { y: 0, opacity: 1, duration: 1 },
-              0.2
-            );
-          }
-
-          if (itemsContainerRef.current) {
-            tl.fromTo(
-              itemsContainerRef.current.children,
-              { y: 50, opacity: 0, scale: 0.9 },
-              { y: 0, opacity: 1, scale: 1, duration: 1, stagger: 0.2 },
-              0.4
-            );
-          }
+        if (headlineRef.current) {
+          tl.fromTo(
+            headlineRef.current,
+            { y: 50, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1 },
+            0
+          );
         }
-      );
+
+        if (subtitleRef.current) {
+          tl.fromTo(
+            subtitleRef.current,
+            { y: 30, opacity: 0 },
+            { y: 0, opacity: 1, duration: 1 },
+            0.2
+          );
+        }
+
+        if (itemsContainerRef.current) {
+          tl.fromTo(
+            itemsContainerRef.current.children,
+            { y: 50, opacity: 0, scale: 0.9 },
+            { y: 0, opacity: 1, scale: 1, duration: 1, stagger: 0.2 },
+            0.4
+          );
+        }
+      });
 
       return () => {
         mm.revert();
