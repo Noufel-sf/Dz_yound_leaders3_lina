@@ -25,7 +25,7 @@ export default function WhatYourGoingToSee() {
     },
     {
       title: "الجذور النوميدية",
-      image: "/m2.png",
+      image: "/m8.jpg",
     },
   ];
 

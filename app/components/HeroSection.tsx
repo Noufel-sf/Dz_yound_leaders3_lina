@@ -38,9 +38,8 @@ export default function HeroSection() {
             className="mb-6 inline-flex items-center gap-2 border-2 border-primary/40 bg-primary/10 px-6 py-3 backdrop-blur-sm animate-slideDown"
             style={{ animationDelay: "0.1s" }}
           >
-            <span className="h-2 w-2 bg-primary" />
             <span className="text-sm font-bold text-primary">
-              منصة السفر والسياحة الأولى
+               الهوية والتاريخ الجزائري
             </span>
           </div>
 

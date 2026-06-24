@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TransitionLink from "./ui/TransitionLink";
+import Link from "next/link";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -122,14 +123,13 @@ function CtaSection() {
         className="relative z-10 mx-auto max-w-5xl px-4 text-center"
       >
         <h2 className="heading text-5xl font-light leading-tight tracking-tight text-white sm:text-9xl">
-          إن لم نؤمّن مستقبلنا،
+          من جذور الجزائر العميقة الى المماد
           <br />
-          فلن نجد سببًا لنصنعه.
+          الى اثر يلهم اجيال الغد
         </h2>
 
         <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white sm:text-lg">
-          مشروع البوصلة يمنحك الأدوات والمسار لتصنع أثرًا حقيقيًا في مجتمعك
-          وتكون جزءًا من الجيل القادر على القيادة.
+        انضم الينا في رحلة عبر الزمن
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
@@ -141,13 +141,12 @@ function CtaSection() {
             <ArrowLeft className="h-5 w-5" />
           </TransitionLink>
 
-          <a
-            href=""
-            target="_blank"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 border-2 border-black bg-secondary px-8 py-3 font-bold text-white shadow-[4px_4px_0_0_#111111] transition hover:bg-secondary/80 hover:text-black hover:translate-x-boxShadowX hover:translate-y-boxShadowY hover:shadow-none md:text-lg"
           >
             انضم الآن
-          </a>
+          </Link>
         </div>
       </div>
     </section>

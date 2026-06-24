@@ -125,7 +125,7 @@ export default function AboutPage() {
       <WhatYourGoingToSee />
       <ProblemSection />
       <Plan />
-      <Owner />
+      {/* <Owner /> */}
       <CtaSection />
       <FaqSection />
     </section>

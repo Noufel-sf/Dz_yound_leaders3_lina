@@ -17,15 +17,15 @@ export default function WhatYourGoingToSee() {
   const items = [
     {
       title: "الممالك والإمارات الجزائرية",
-      image: "/m1.png",
+      image: "/m3.jpg",
     },
     {
       title: "الحضارات الإسلامية",
-      image: "/m2.png",
+      image: "/m4.jpg",
     },
     {
       title: "الجذور النوميدية",
-      image: "/m2.png",
+      image: "/m5.jpg",
     },
   ];
 
