@@ -19,14 +19,15 @@ export default function WhatYourGoingToSee() {
       title: "الممالك والإمارات الجزائرية",
       image: "/m2.png",
     },
+     {
+      title: "الجذور النوميدية",
+      image: "/m8.jpg",
+    },
     {
       title: "الحضارات الإسلامية",
       image: "/m1.png",
     },
-    {
-      title: "الجذور النوميدية",
-      image: "/m8.jpg",
-    },
+   
   ];
 
   useGSAP(
