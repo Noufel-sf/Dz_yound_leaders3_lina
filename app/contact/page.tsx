@@ -8,18 +8,17 @@ import HistoryButton from "../components/ui/HistoryButton";
 import { ScrollToPlugin } from "gsap/all";
 import OurLocation from "../components/OurLocation";
 import Image from "next/image";
-import { Factory } from "lucide-react";
 import FaqSection from "../components/FaqSection";
 
 const SOCIAL_LINKS = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com/erth.dz",
+    link: "https://www.instagram.com/erthatherpodcast?igsh=OTZzOHozMm9qNzFr",
     target: "_blank",
   },
   {
     name: "Facebook",
-    link: "https://www.facebook.com/erth.dz",
+    link: "https://www.facebook.com/profile.php?id=61589667112205&locale=fr_FR",
     target: "_blank",
   },
 ];
@@ -29,9 +28,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const ContactPage = () => {
   // email related logic
 
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
 
   const containerRef = useRef<HTMLDivElement>(null);
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -127,7 +123,7 @@ const ContactPage = () => {
                 راسلنا
               </p>
               <a className="group relative mt-2 block w-fit font-display text-xl uppercase italic underline-offset-8 hover:text-primary md:text-2xl">
-                info@erth-dz.com
+                erthathar@gmail.com
               </a>
             </div>
             <div className="reveal-text">
