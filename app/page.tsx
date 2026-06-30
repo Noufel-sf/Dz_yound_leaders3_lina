@@ -1,15 +1,16 @@
 "use client";
+import dynamic from "next/dynamic";
 
-import CtaSection from "./components/CtaSection";
-import FaqSection from "./components/FaqSection";
 import HeroSection from "./components/HeroSection";
 import gsap from "gsap";
-import OurValues from "./components/OurValues";
 import { useRef } from "react";
-import TestimonialSection from "./components/SomeImagesSection";
-import OurVision from "./components/OurVision";
-import ProblemSection from "./components/ProblemSection";
-import EpisodsSection from "./components/EpisodsSection";
+const CtaSection = dynamic(() => import("./components/CtaSection"));
+const OurValues = dynamic(() => import("./components/OurValues"));
+const FaqSection = dynamic(() => import("./components/FaqSection"));
+const OurVision = dynamic(() => import("./components/OurVision"));
+const ProblemSection = dynamic(() => import("./components/ProblemSection"));
+const TestimonialSection = dynamic(() => import("./components/SomeImagesSection"));
+const EpisodsSection = dynamic(() => import("./components/EpisodsSection"));
 
 
 export default function Home() {
